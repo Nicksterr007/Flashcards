@@ -10,7 +10,7 @@ Question Flashcard with answer.
 ### App Walk-though
 
 
-<img src="https://imgur.com/tI9juXz" width=200><br>
+<img src="https://github.com/Nicksterr007/Flashcards/blob/main/Flashcard.gif?raw=true" width=200><br>
 
 ## Required
 - [x] Create New Project in Xcode
