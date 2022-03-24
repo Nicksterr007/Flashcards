@@ -59,6 +59,7 @@ class ViewController: UIViewController {
         currentIndex = flashcards.count - 1
         print("Our current index is \(currentIndex)")
         
+        
         updateNextPrevButtons()
         
         updateLabels()
