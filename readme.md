@@ -1,4 +1,4 @@
-## NAME_OF_YOUR_APP_HERE
+## Flashcards
 ## Lab 2
 
 ### App Description
@@ -6,7 +6,7 @@ Flashcard updated
 
 ### App Walk-though
 
-<img src="https://im2.ezgif.com/tmp/ezgif-2-091cc0da17.webp" width=200><br>
+<img src="https://im2.ezgif.com/tmp/ezgif-2-d7893edf96.webp" width=200><br>
 
 
 ## Required
