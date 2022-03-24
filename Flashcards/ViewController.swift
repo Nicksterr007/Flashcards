@@ -33,7 +33,7 @@ class ViewController: UIViewController {
         }
         updateNextPrevButtons()
     }
-
+    
     @IBAction func didTaponFlashcard(_ sender: Any) {
         
         

@@ -5,7 +5,7 @@
 ### App Description
 Flashcards updated again!
 
-### App Walk-though
+### App Walk-though  
 
 <img src="https://im5.ezgif.com/tmp/ezgif-5-d8c9222e25.webp" width=200><br>
 
