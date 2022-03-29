@@ -7,7 +7,7 @@ Flashcards updated again!
 
 ### App Walk-though  
 
-<img src="https://im2.ezgif.com/tmp/ezgif-2-892a35e1cb.webp" width=200><br>
+<img src="https://im.ezgif.com/tmp/ezgif-1-f76839fa4b.gif" width=200><br>
 
 ## Required
 - [x] User can browse through multiple flashcards
