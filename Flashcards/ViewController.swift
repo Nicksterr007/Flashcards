@@ -36,13 +36,22 @@ class ViewController: UIViewController {
     
     @IBAction func didTaponFlashcard(_ sender: Any) {
         
-        
-       if frontLabel.isHidden == true {
-            frontLabel.isHidden = false
+      flipFlashcard()
 
-        }
-        else {
-            frontLabel.isHidden = true
+    }
+    
+    func flipFlashcard() {
+        
+        if frontLabel.isHidden == true {
+             frontLabel.isHidden = false
+
+         }
+         else {
+             frontLabel.isHidden = true
+         }
+        
+        UIView.transition(with: card, duration: 0.3, options: .transitionFlipFromRight) {
+            //self.frontLabel.isHidden = true
         }
 
     }
@@ -82,6 +91,8 @@ class ViewController: UIViewController {
         updateLabels()
         
         updateNextPrevButtons()
+        
+        animateCardOut1()
     }
     
     @IBAction func didTapOnNext(_ sender: Any) {
@@ -91,12 +102,18 @@ class ViewController: UIViewController {
         updateLabels()
         
         updateNextPrevButtons()
+        
+        animateCardOut()
+        
     }
     
     
     @IBOutlet weak var nextButton: UIButton!
     
     @IBOutlet weak var prevButton: UIButton!
+    
+    
+    @IBOutlet weak var card: UIView!
     
     @IBAction func prevButton(_ sender: Any) {
     }
@@ -150,9 +167,48 @@ class ViewController: UIViewController {
         
     }
     
-}
+    func animateCardOut() {
+        UIView.animate(withDuration: 0.3) {
+            self.card.transform = CGAffineTransform.identity.translatedBy(x: -300.0, y: 0.0)
+        } completion: { finished in
+            
+            self.updateLabels()
+            
+            self.animateCardIn()
+        }
 
+    }
+
+    func animateCardIn() {
+        
+        card.transform = CGAffineTransform.identity.translatedBy(x: 300.0, y: 0.0)
+        
+        UIView.animate(withDuration: 0.3) {
+            self.card.transform = CGAffineTransform.identity
+        }
+    }
     
+    func animateCardOut1() {
+        UIView.animate(withDuration: 0.3) {
+            self.card.transform = CGAffineTransform.identity.translatedBy(x: 300.0, y: 0.0)
+        } completion: { finished in
+            
+            self.updateLabels()
+            
+            self.animateCardIn1()
+        }
+
+    }
+
+    func animateCardIn1() {
+        
+        card.transform = CGAffineTransform.identity.translatedBy(x: -300.0, y: 0.0)
+        
+        UIView.animate(withDuration: 0.3) {
+            self.card.transform = CGAffineTransform.identity
+        }
+    }
+}
 
 
 

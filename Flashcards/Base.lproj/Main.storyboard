@@ -43,31 +43,39 @@
                                     <outletCollection property="gestureRecognizers" destination="mLI-3C-7rc" appends="YES" id="Q79-Nl-5Pj"/>
                                 </connections>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tkv-W8-NpD">
-                                <rect key="frame" x="184" y="807" width="46" height="56"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tkv-W8-NpD">
+                                <rect key="frame" x="179.5" y="803" width="75" height="64"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="+">
-                                    <fontDescription key="titleFontDescription" type="system" pointSize="35"/>
-                                </buttonConfiguration>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="+" image="addButton"/>
                                 <connections>
                                     <segue destination="dwh-RF-aSI" kind="presentation" id="YEz-Gl-l24"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YaE-Bh-ORi">
-                                <rect key="frame" x="307" y="821" width="81" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Next"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YaE-Bh-ORi">
+                                <rect key="frame" x="284" y="802" width="100" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="J3M-kr-rQr"/>
+                                    <constraint firstAttribute="height" constant="64" id="ND0-b9-TWL"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Next" image="arrowRight"/>
+                                <state key="disabled" image="arrowRightDisabled"/>
                                 <connections>
                                     <action selector="didTapOnNext:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZUQ-9p-xDP"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WM1-ks-BH0">
-                                <rect key="frame" x="27" y="820" width="85" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Prev"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WM1-ks-BH0">
+                                <rect key="frame" x="45" y="802" width="100" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="Szl-D0-u78"/>
+                                    <constraint firstAttribute="height" constant="64" id="xWY-br-Uuu"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Prev" image="arrowLeft">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <state key="disabled" image="arrowLeftDisabled"/>
                                 <connections>
                                     <action selector="didTapOnPrev:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NwP-nr-wWp"/>
                                     <action selector="prevButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kPy-j3-JXT"/>
@@ -76,12 +84,19 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="WM1-ks-BH0" secondAttribute="bottom" constant="30" id="2cN-dM-usS"/>
+                            <constraint firstAttribute="bottom" secondItem="YaE-Bh-ORi" secondAttribute="bottom" constant="30" id="7Bd-DX-ncl"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="YaE-Bh-ORi" secondAttribute="trailing" constant="30" id="OSw-jp-klh"/>
+                            <constraint firstItem="WM1-ks-BH0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="45" id="fKS-TW-Xb3"/>
+                        </constraints>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="0Qq-Mj-Tan"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="backLabel" destination="mL3-dj-0B2" id="Upq-Wl-HSO"/>
+                        <outlet property="card" destination="gsZ-Wt-ndp" id="w5V-32-Q1p"/>
                         <outlet property="frontLabel" destination="nR7-3o-gSE" id="Agg-RL-Bbi"/>
                         <outlet property="nextButton" destination="YaE-Bh-ORi" id="5Qz-CY-dqf"/>
                         <outlet property="prevButton" destination="WM1-ks-BH0" id="RqR-aX-LMa"/>
@@ -161,6 +176,11 @@
         </scene>
     </scenes>
     <resources>
+        <image name="addButton" width="64" height="64"/>
+        <image name="arrowLeft" width="64" height="64"/>
+        <image name="arrowLeftDisabled" width="64" height="64"/>
+        <image name="arrowRight" width="64" height="64"/>
+        <image name="arrowRightDisabled" width="64" height="64"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
