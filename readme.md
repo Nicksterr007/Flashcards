@@ -32,7 +32,7 @@ Flashcards updated again!
 
 ### App Walk-though  
 
-<img src="https://im5.ezgif.com/tmp/ezgif-5-d8c9222e25.webp" width=200><br>
+<img src="https://im.ezgif.com/tmp/ezgif-1-f76839fa4b.gif" width=200><br>
 
 ## Required
 - [x] User can browse through multiple flashcards
